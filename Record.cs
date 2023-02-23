@@ -65,7 +65,8 @@ class Record
     }
 
     // Mutate immutable properties of a record instance using a 'with' expression
-    public void NonDestructiveMutation() {
+    public void NonDestructiveMutation()
+    {
         Person2 person1 = new("Nancy", "Davolio") { PhoneNumbers = new string[1] { "555-1234" } };
         Console.WriteLine(person1);
         // output: Person { FirstName = Nancy, LastName = Davolio, PhoneNumbers = System.String[] }
@@ -85,7 +86,8 @@ class Record
         Console.WriteLine(person1 == person2); // output: True
     }
 
-    public void PositionalParametersInDerivedRecordTypes() {
+    public void PositionalParametersInDerivedRecordTypes()
+    {
         Person teacher = new Teacher("Nancy", "Davolio", 3);
         Console.WriteLine(teacher);
     }
@@ -109,5 +111,15 @@ class Record
 
         Point p3 = (NamedPoint) p1 with { Name="B", Zderived = 5 };
         Console.WriteLine(p3);
+    }
+
+    public void DeconstructorBehaviorInDerivedRecords()
+    {
+        Person teacher = new Teacher("Nancy", "Davolio", 3);
+        var (firstName, lastName) = teacher; // Doesn't deconstruct Grade
+        Console.WriteLine($"{firstName} {lastName}"); // output: Nancy Davolio
+
+        var (fName, lName, grade) = (Teacher)teacher;
+        Console.WriteLine($"{fName} {lName} {grade}"); // output: Nancy Davolio 3
     }
 }

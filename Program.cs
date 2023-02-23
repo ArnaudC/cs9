@@ -9,5 +9,7 @@ class Program
         record1.NonDestructiveMutation();
         record1.EqualityInInheritanceHierarchies();
         record1.WithExpressionsInDerivedRecords();
+        record1.PositionalParametersInDerivedRecordTypes();
+        record1.DeconstructorBehaviorInDerivedRecords();
     }
 }
