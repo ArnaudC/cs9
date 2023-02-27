@@ -1,18 +1,17 @@
-﻿namespace CS9;
+﻿using CS9;
 
-class Program
-{
-    public static void Main()
-    {
-        var record1 = new Record();
-        record1.ValueEquality();
-        record1.NonDestructiveMutation();
-        record1.EqualityInInheritanceHierarchies();
-        record1.WithExpressionsInDerivedRecords();
-        record1.PositionalParametersInDerivedRecordTypes();
-        record1.DeconstructorBehaviorInDerivedRecords();
+// Records
+var record1 = new CustomRecord();
+record1.ValueEquality();
+record1.NonDestructiveMutation();
+record1.EqualityInInheritanceHierarchies();
+record1.WithExpressionsInDerivedRecords();
+record1.PositionalParametersInDerivedRecordTypes();
+record1.DeconstructorBehaviorInDerivedRecords();
 
-        var weatherObservation = new WeatherObservation();
-        Console.WriteLine(weatherObservation);
-    }
-}
+// Init only setters
+var weatherObservation = new WeatherObservation();
+Console.WriteLine(weatherObservation);
+
+// Pattern matching enhancements
+var PatternMatchingEnhancements = new PatternMatchingEnhancements();

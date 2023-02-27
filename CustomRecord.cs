@@ -2,7 +2,7 @@ using System.Text;
 
 namespace CS9;
 
-class Record
+class CustomRecord
 {
     public record Person1(string FirstName, string LastName, string[] PhoneNumbers);
 
