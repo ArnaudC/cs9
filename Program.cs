@@ -18,3 +18,7 @@ var PatternMatchingEnhancements = new PatternMatchingEnhancements();
 
 // Performance and interop
 PerformanceInterop.Main();
+
+// Fit and finish freatures
+var fitAndFinishFreatures = new FitAndFinishFreatures();
+fitAndFinishFreatures.Run();
